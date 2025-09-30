@@ -1,0 +1,538 @@
+<!DOCTYPE html><!--[if IE]><![endif]--><!--[if IE 8 ]><html dir="ltr" lang="bg" class="ie8"><![endif]--><!--[if IE 9 ]><html dir="ltr" lang="bg" class="ie9"><![endif]--><!--[if (gt IE 9)|!(IE)]><!--><html dir="ltr" lang="bg"><!--<![endif]--><head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>TeaShop.bg - магазин за чай, кафе и билки</title>
+<base href=""/>
+<meta name="description" content="Онлайн магазинът с най-голямо разнообразие от пакетиран и насипен чай, кафе и билки."/>
+<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="css/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css"/>
+<link href="css/stylesheet.css" rel="stylesheet"/>
+<link href="css/owl.carousel.css" type="text/css" rel="stylesheet" media="screen"/>
+<script src="js/common.js" type="text/javascript"></script>
+<link href="image/catalog/teacup.png" rel="icon"/>
+<script src="js/owl.carousel.min.js" type="text/javascript"></script>
+</head>
+<body class="common-home">
+<nav id="top">
+  <div class="container">
+    <div class="pull-left">
+<form action="https://teashop.bg/index.php?route=common/currency/currency" method="post" enctype="multipart/form-data" id="form-currency">
+  <div class="btn-group">
+    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                            <strong> лв.</strong>
+            <span class="hidden-xs hidden-sm hidden-md">Валута</span> <i class="fa fa-caret-down"></i></button>
+    <ul class="dropdown-menu">
+                  <li><button class="currency-select btn btn-link btn-block" type="button" name="EUR">€ Euro</button></li>
+                        <li><button class="currency-select btn btn-link btn-block" type="button" name="USD">$ US Dollar</button></li>
+                        <li><button class="currency-select btn btn-link btn-block" type="button" name="BGN"> лв. БГ лева</button></li>
+                </ul>
+  </div>
+  <input type="hidden" name="code" value=""/>
+  <input type="hidden" name="redirect" value="https://teashop.bg/index.php?route=common/home"/>
+</form>
+</div>
+    <div class="pull-left">
+<form action="https://teashop.bg/index.php?route=common/language/language" method="post" enctype="multipart/form-data" id="form-language">
+  <div class="btn-group">
+    <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+            <img src="imgs/bg.png" alt="Български" title="Български"/>
+                    <span class="hidden-xs hidden-sm hidden-md">Език</span> <i class="fa fa-caret-down"></i></button>
+    <ul class="dropdown-menu">
+            <li><button class="btn btn-link btn-block language-select" type="button" name="bg"><img src="imgs/bg.png" alt="Български" title="Български"/> Български</button></li>
+            <li><button class="btn btn-link btn-block language-select" type="button" name="en-gb"><img src="imgs/en-gb.png" alt="English" title="English"/> English</button></li>
+          </ul>
+  </div>
+  <input type="hidden" name="code" value=""/>
+  <input type="hidden" name="redirect" value="https://teashop.bg/index.php?route=common/home"/>
+</form>
+</div>
+    <div id="top-links" class="nav pull-right">
+      <ul class="list-inline">
+        <li><a href="https://teashop.bg/index.php?route=information/contact"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md">0878600760</span></li>
+        <li class="dropdown"><a href="https://teashop.bg/index.php?route=account/account" title="Моят профил" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md">Моят профил</span> <span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="https://teashop.bg/index.php?route=account/register">Регистрирайте се</a></li>
+            <li><a href="https://teashop.bg/index.php?route=account/login">Влез</a></li>
+                      </ul>
+        </li>
+        <li><a href="https://teashop.bg/index.php?route=account/wishlist" id="wishlist-total" title="Желани продукти (0)"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md">Желани продукти (0)</span></a></li>
+        <li><a href="https://teashop.bg/index.php?route=checkout/cart" title="Количка"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Количка</span></a></li>
+        <li><a href="https://teashop.bg/index.php?route=checkout/checkout" title="Плащане"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md">Плащане</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div id="logo">
+                    <a href="https://teashop.bg/index.php?route=common/home"><img src="imgs/677.png" title="TeaShop.bg - магазин за чай, кафе и билки" alt="TeaShop.bg - магазин за чай, кафе и билки" class="img-responsive"/></a>
+                  </div>
+      </div>
+      <div class="col-sm-5"><div id="search" class="input-group">
+  <input type="text" name="search" value="" placeholder="Търсене" class="form-control input-lg"/>
+  <span class="input-group-btn">
+    <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
+  </span>
+</div>      </div>
+      <div class="col-sm-3"><div id="cart" class="btn-group btn-block">
+  <button type="button" data-toggle="dropdown" data-loading-text="Зареждане..." class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="fa fa-shopping-cart"></i> <span id="cart-total">0 продукт(а) - 0.00 лв. <span class="second-currency">(0.00€)</span></span></button>
+  <ul class="dropdown-menu pull-right">
+        <li>
+      <p class="text-center">Вашата количка е празна!</p>
+    </li>
+      </ul>
+</div>
+</div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <nav id="menu" class="navbar">
+    <div class="navbar-header"><span id="category" class="visible-xs">Категории</span>
+      <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+                        <li class="dropdown"><a href="https://teashop.bg/index.php?route=product/category&amp;path=59" class="dropdown-toggle" data-toggle="dropdown">ЧАЙ</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-inner">
+                            <ul class="list-unstyled">
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=59_83">БЕЗ КОФЕИН (42)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=59_67">БИО ЧАЙ (9)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=59_60">БЯЛ ЧАЙ (8)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=59_62">ЗЕЛЕН НАТУРАЛЕН ЧАЙ (12)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=59_64">ЗЕЛЕН АРОМАТЕН ЧАЙ (34)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=59_81">УЛОНГ /ООЛОНГ/ (3)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=59_68">ЧЕРЕН НАТУРАЛЕН ЧАЙ (10)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=59_70">ЧЕРЕН АРОМАТЕН ЧАЙ (18)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=59_71">ПУ ЕР (3)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=59_72">СМЕСЕНИ ЧАЙОВЕ (18)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=59_73">ПЛОДОВ ЧАЙ (14)</a></li>
+                              </ul>
+                          </div>
+            <a href="https://teashop.bg/index.php?route=product/category&amp;path=59" class="see-all">Покажи всички ЧАЙ</a> </div>
+        </li>
+                                <li class="dropdown"><a href="https://teashop.bg/desktops" class="dropdown-toggle" data-toggle="dropdown">ЕКЗОТИЧНИ</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-inner">
+                            <ul class="list-unstyled">
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=20_89">МАТЧА (1)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=20_26">РОЙБОС (18)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=20_65">ЛАПАЧО (2)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=20_27">МАТЕ (5)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=20_66">АЮРВЕДА  (3)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=20_82">ХИБИСКУС /КАРКАДЕ/ (2)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=20_91">ХЪНИБУШ / HONEYBUSH (1)</a></li>
+                              </ul>
+                          </div>
+            <a href="https://teashop.bg/desktops" class="see-all">Покажи всички ЕКЗОТИЧНИ</a> </div>
+        </li>
+                                <li class="dropdown"><a href="https://teashop.bg/index.php?route=product/category&amp;path=18" class="dropdown-toggle" data-toggle="dropdown">БИЛКИ</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-inner">
+                            <ul class="list-unstyled">
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=18_46">БИЛКИ (89)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=18_45">ЛЕЧЕБНИ БИЛКОВИ СМЕСИ (39)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=18_90">БИЛКОВИ СМЕСИ (14)</a></li>
+                              </ul>
+                          </div>
+            <a href="https://teashop.bg/index.php?route=product/category&amp;path=18" class="see-all">Покажи всички БИЛКИ</a> </div>
+        </li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=85">ПАКЕТИРАН ЧАЙ</a></li>
+                                <li class="dropdown"><a href="https://teashop.bg/index.php?route=product/category&amp;path=74" class="dropdown-toggle" data-toggle="dropdown">КАФЕ </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-inner">
+                            <ul class="list-unstyled">
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=74_92">АРОМАТИЗИРАНО КАФЕ (30)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=74_93">КАФЕ БЕЗ КОФЕИН (3)</a></li>
+                              </ul>
+                          </div>
+            <a href="https://teashop.bg/index.php?route=product/category&amp;path=74" class="see-all">Покажи всички КАФЕ </a> </div>
+        </li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=57">ДРУГИ</a></li>
+                                <li class="dropdown"><a href="https://teashop.bg/index.php?route=product/category&amp;path=17" class="dropdown-toggle" data-toggle="dropdown">АКСЕСОАРИ</a>
+          <div class="dropdown-menu">
+            <div class="dropdown-inner">
+                            <ul class="list-unstyled">
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=17_75">ЧАЙНИЦИ, КАНИ, КОМПЛЕКТИ (7)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=17_76">ЧАШИ ЗА ЧАЙ (13)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=17_77">КУТИИ ЗА ЧАЙ И КАФЕ (17)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=17_78">МАТЕ АКСЕСОАРИ (3)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=17_79">МАТЧА АКСЕСОАРИ (5)</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=17_80">ЦЕДКИ И ФИЛТРИ (7)</a></li>
+                              </ul>
+                          </div>
+            <a href="https://teashop.bg/index.php?route=product/category&amp;path=17" class="see-all">Покажи всички АКСЕСОАРИ</a> </div>
+        </li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=33">КОМПЛЕКТИ ЗА ПРОБА</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=88">БЛОГ</a></li>
+                                <li><a href="https://teashop.bg/index.php?route=product/category&amp;path=87">НОВИ ПРОДУКТИ</a></li>
+                      </ul>
+    </div>
+  </nav>
+</div>
+<div class="container">
+  <div class="row">                <div id="content" class="col-sm-12"><div id="slideshow0" class="owl-carousel" style="opacity: 1;">
+    <div class="item">
+        <a href="https://teashop.bg/desktops"><img src="imgs/banner-tea-1140x380.png" alt="Екзотичен чай" class="img-responsive"/></a>
+      </div>
+    <div class="item">
+        <a href="https://teashop.bg/index.php?route=product/category&amp;path=74"><img src="imgs/benner-cofe-2-1140x380.png" alt="Ароматизирано кафе" class="img-responsive"/></a>
+      </div>
+    <div class="item">
+        <a href="https://teashop.bg/index.php?route=product/category&amp;path=18"><img src="imgs/herbs-banner-1140x380.png" alt="Билки" class="img-responsive"/></a>
+      </div>
+  </div>
+<script type="text/javascript"><!--
+$('#slideshow0').owlCarousel({
+	items: 6,
+	autoPlay: 3000,
+	singleItem: true,
+	navigation: true,
+	navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
+	pagination: true
+});
+--></script><h3>Продукти на фокус</h3>
+<div class="row">
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=392"><img src="imgs/13722-300x300.jpg" alt="КАФЕ КОЛЕДНА БИСКВИТКА 100% АРАБИКА" title="КАФЕ КОЛЕДНА БИСКВИТКА 100% АРАБИКА" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=392">КАФЕ КОЛЕДНА БИСКВИТКА 100% АРАБИКА</a></h4>
+        <p>Произход и плантацияСамо внимателно
+подбрани, узрели на слънце зърна арабика от Централна и Южна Ам..</p>
+                        <p class="price">
+                    9.20 лв. <span class="second-currency">(4.70€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;392&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;392&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;392&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=367"><img src="imgs/12944_1-300x300.jpg" alt="КАФЕ ОРЕХОВ КРЕМ 100 % АРАБИКА" title="КАФЕ ОРЕХОВ КРЕМ 100 % АРАБИКА" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=367">КАФЕ ОРЕХОВ КРЕМ 100 % АРАБИКА</a></h4>
+        <p>За ароматизираните кафета използваме внимателно подбрани, 100% зърна арабика от ферми в Южна и Центр..</p>
+                        <p class="price">
+                    9.20 лв. <span class="second-currency">(4.70€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;367&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;367&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;367&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=338"><img src="imgs/13642--300x300.jpg" alt="КАФЕ РОМ И ШОКОЛАД 100 % АРАБИКА" title="КАФЕ РОМ И ШОКОЛАД 100 % АРАБИКА" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=338">КАФЕ РОМ И ШОКОЛАД 100 % АРАБИКА</a></h4>
+        <p>За тази класика е
+подбрано зелено кафе от Колумбия и Бразилия. След зимна разходка на чист,
+хладен..</p>
+                        <p class="price">
+                    9.20 лв. <span class="second-currency">(4.70€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;338&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;338&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;338&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=318"><img src="imgs/14922--300x300.jpg" alt="КАФЕ СИНЯ  СЛИВА И КАНЕЛА 100 % АРАБИКА" title="КАФЕ СИНЯ  СЛИВА И КАНЕЛА 100 % АРАБИКА" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=318">КАФЕ СИНЯ  СЛИВА И КАНЕЛА 100 % АРАБИКА</a></h4>
+        <p>Най-добрите планински
+кафета от слънчева Южна Америка се комбинират в 
+рецептата за торта със..</p>
+                        <p class="price">
+                    9.20 лв. <span class="second-currency">(4.70€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;318&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;318&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;318&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=413"><img src="imgs/22751-300x300.jpg" alt="РОЙБОС БИСКВИТКА " title="РОЙБОС БИСКВИТКА " class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=413">РОЙБОС БИСКВИТКА </a></h4>
+        <p>Пищно декориран и
+привлекателен чай ви изкушава с вкуса на цветни аромати като пресни
+джинджифилов..</p>
+                        <p class="price">
+                    5.60 лв. <span class="second-currency">(2.86€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;413&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;413&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;413&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=412"><img src="imgs/21393-300x300.jpg" alt="РОЙБОС БРЮЛЕ С ПОДПРАВКИ" title="РОЙБОС БРЮЛЕ С ПОДПРАВКИ" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=412">РОЙБОС БРЮЛЕ С ПОДПРАВКИ</a></h4>
+        <p>Джинджифиловият
+човек може просто да се разтопи в любимия чай. Крехките парчета карамел,
+зърната р..</p>
+                        <p class="price">
+                    5.60 лв. <span class="second-currency">(2.86€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;412&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;412&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;412&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=347"><img src="imgs/21636-300x300.jpg" alt="РОЙБОС ПЕЧЕНА ЯБЪЛКА" title="РОЙБОС ПЕЧЕНА ЯБЪЛКА" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=347">РОЙБОС ПЕЧЕНА ЯБЪЛКА</a></h4>
+        <p>„Деца, елате да познаете какво се пече във фурната!“ ...Печените ябълки са олицетворение на коледния..</p>
+                        <p class="price">
+                    4.60 лв. <span class="second-currency">(2.35€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;347&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;347&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;347&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=305"><img src="imgs/21623-300x300.jpg" alt="РОЙБОС АКАЙ-ФЪСТЪЧЕНО МАСЛО" title="РОЙБОС АКАЙ-ФЪСТЪЧЕНО МАСЛО" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=305">РОЙБОС АКАЙ-ФЪСТЪЧЕНО МАСЛО</a></h4>
+        <p>Базирано на
+популярното, греховно сладко лакомство с фъстъчено масло и желе от САЩ, това
+творение ..</p>
+                        <p class="price">
+                    5.00 лв. <span class="second-currency">(2.56€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;305&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;305&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;305&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=74"><img src="imgs/21452-300x300.jpg" alt="ЗЕЛЕН ЧАЙ ПЕЧЕНА ЯБЪЛКА " title="ЗЕЛЕН ЧАЙ ПЕЧЕНА ЯБЪЛКА " class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=74">ЗЕЛЕН ЧАЙ ПЕЧЕНА ЯБЪЛКА </a></h4>
+        <p>Насладете се на
+студените зимни вечери с вкуса на този празничен деликатес. Комбинация от зимни
+по..</p>
+                        <p class="price">
+                    5.00 лв. <span class="second-currency">(2.56€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;74&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;74&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;74&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=330"><img src="imgs/22035-300x300.jpg" alt="ЗЕЛЕН ЧАЙ ПОРТОКАЛОВА БИСКВИТКА " title="ЗЕЛЕН ЧАЙ ПОРТОКАЛОВА БИСКВИТКА " class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=330">ЗЕЛЕН ЧАЙ ПОРТОКАЛОВА БИСКВИТКА </a></h4>
+        <p>Това творение
+въодушевява с вкуса си. Деликатни кремообразни вкусове на торта, съчетани със
+свеж п..</p>
+                        <p class="price">
+                    5.60 лв. <span class="second-currency">(2.86€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;330&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;330&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;330&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=390"><img src="imgs/22395-300x300.gif" alt="ЗЕЛЕН ЧАЙ КАРДАМОМ И КАНЕЛА - Spice tea" title="ЗЕЛЕН ЧАЙ КАРДАМОМ И КАНЕЛА - Spice tea" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=390">ЗЕЛЕН ЧАЙ КАРДАМОМ И КАНЕЛА - Spice tea</a></h4>
+        <p>Това е наистина
+деликатен и елегантен сорт Чай. Благодарение на основата от зелен чай, тази
+смес е..</p>
+                        <p class="price">
+                    7.80 лв. <span class="second-currency">(3.99€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;390&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;390&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;390&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=64"><img src="imgs/22268-300x300.gif" alt="ЗЕЛЕН ЧАЙ  ДЖИНДЖИФИЛ" title="ЗЕЛЕН ЧАЙ  ДЖИНДЖИФИЛ" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=64">ЗЕЛЕН ЧАЙ  ДЖИНДЖИФИЛ</a></h4>
+        <p>Зелен чай от
+Китай и Цейлон! Поради голямото търсене от цял свят, което установихме, сме
+включили ..</p>
+                        <p class="price">
+                    4.60 лв. <span class="second-currency">(2.35€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;64&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;64&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;64&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=417"><img src="imgs/21630-300x300.jpg" alt="ЧЕРЕН ЧАЙ БИСКВИТКА" title="ЧЕРЕН ЧАЙ БИСКВИТКА" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=417">ЧЕРЕН ЧАЙ БИСКВИТКА</a></h4>
+        <p>Бисквитките
+и млякото за Дядо Коледа са нещо като традиция, но в студена зимна нощ той ще
+бъде по-..</p>
+                        <p class="price">
+                    5.80 лв. <span class="second-currency">(2.97€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;417&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;417&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;417&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=320"><img src="imgs/22413-300x300.jpg" alt="ЧЕРЕН ЧАЙ КАНЕЛА" title="ЧЕРЕН ЧАЙ КАНЕЛА" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=320">ЧЕРЕН ЧАЙ КАНЕЛА</a></h4>
+        <p>Класика от старо
+време, която трябва да бъде част от всеки коледен асортимент. Смес от силен
+черен..</p>
+                        <p class="price">
+                    5.00 лв. <span class="second-currency">(2.56€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;320&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;320&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;320&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=233"><img src="imgs/21690-300x300.jpg" alt="ЧЕРЕН ЧАЙ ПАНЕТОНЕ" title="ЧЕРЕН ЧАЙ ПАНЕТОНЕ" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=233">ЧЕРЕН ЧАЙ ПАНЕТОНЕ</a></h4>
+        <p>Панетоне е популярен италиански деликатес, който
+се яде по Коледа. Вдъхновени от този десерт, разра..</p>
+                        <p class="price">
+                    5.60 лв. <span class="second-currency">(2.86€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;233&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;233&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;233&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+    <div class="product-layout col-lg-3 col-md-3 col-sm-6 col-xs-12">
+    <div class="product-thumb transition">
+      <div class="image"><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=268"><img src="imgs/21691-300x300.jpg" alt="ЗЕЛЕН ЧАЙ УЛОНГ SPICE NOTE" title="ЗЕЛЕН ЧАЙ УЛОНГ SPICE NOTE" class="img-responsive"/></a></div>
+      <div class="caption">
+        <h4><a href="https://teashop.bg/index.php?route=product/product&amp;product_id=268">ЗЕЛЕН ЧАЙ УЛОНГ SPICE NOTE</a></h4>
+        <p>Насладете се на сладката и уникална смес от чай улонг, съчетан със зимни подправки. Топлият аромат н..</p>
+                        <p class="price">
+                    8.20 лв. <span class="second-currency">(4.19€)</span>                            </p>
+              </div>
+      <div class="button-group">
+        <button type="button" onclick="cart.add(&#39;268&#39;);"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купи</span></button>
+        <button type="button" data-toggle="tooltip" title="Добави в желани" onclick="wishlist.add(&#39;268&#39;);"><i class="fa fa-heart"></i></button>
+        <button type="button" data-toggle="tooltip" title="Добави за сравняване" onclick="compare.add(&#39;268&#39;);"><i class="fa fa-exchange"></i></button>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+    </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+            <div class="col-sm-3">
+        <h5>Информация</h5>
+        <ul class="list-unstyled">
+                    <li><a href="https://teashop.bg/about_us">За нас</a></li>
+                    <li><a href="https://teashop.bg/delivery">Доставка,рекламации и плащане.</a></li>
+                    <li><a href="https://teashop.bg/privacy">Privacy Policy</a></li>
+                    <li><a href="https://teashop.bg/terms">Terms &amp; Conditions</a></li>
+                  </ul>
+      </div>
+            <div class="col-sm-3">
+        <h5>Обслужване на клиенти</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://teashop.bg/index.php?route=information/contact">Контакт с нас</a></li>
+          <li><a href="https://teashop.bg/index.php?route=account/return/add">Рекламации</a></li>
+          <li><a href="https://teashop.bg/index.php?route=information/sitemap">Карта на сайта</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>Други</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://teashop.bg/index.php?route=product/manufacturer">Производители</a></li>
+          <li><a href="https://teashop.bg/index.php?route=account/voucher">Ваучери</a></li>
+          <li><a href="https://teashop.bg/index.php?route=affiliate/account">Партньорска програма</a></li>
+          <li><a href="https://teashop.bg/index.php?route=product/special">Специални предложения</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>Моят профил</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://teashop.bg/index.php?route=account/account">Моят профил</a></li>
+          <li><a href="https://teashop.bg/index.php?route=account/order">История на поръчките</a></li>
+          <li><a href="https://teashop.bg/index.php?route=account/wishlist">Желани продукти</a></li>
+          <li><a href="https://teashop.bg/index.php?route=account/newsletter">Бюлетин</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr/>
+    <p>Powered By <a href="http://www.opencart.com">OpenCart</a><br/> TeaShop.bg - магазин за чай, кафе и билки © 2025</p>
+  </div>
+</footer>
+
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+
+<!-- Theme created by Welford Media for OpenCart 2.0 www.welfordmedia.co.uk -->
+
+</body></html>
