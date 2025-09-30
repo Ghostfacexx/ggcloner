@@ -10,8 +10,25 @@ import (
 
 // TODO: figure out what was done here at 4am
 func arrange(projectDir string) error {
-	indexfile := projectDir + "/index.html"
-	input, err := os.ReadFile(indexfile)
+	// Find all HTML files in the project directory
+	htmlFiles, err := filepath.Glob(filepath.Join(projectDir, "*.html"))
+	if err != nil {
+		return err
+	}
+
+	// Process each HTML file
+	for _, htmlFile := range htmlFiles {
+		if err := arrangeHTMLFile(htmlFile); err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
+// arrangeHTMLFile processes a single HTML file
+func arrangeHTMLFile(htmlFile string) error {
+	input, err := os.ReadFile(htmlFile)
 	if err != nil {
 		return err
 	}
@@ -58,5 +75,5 @@ func arrange(projectDir string) error {
 		return err
 	}
 
-	return os.WriteFile(indexfile, []byte(html), 0777)
+	return os.WriteFile(htmlFile, []byte(html), 0777)
 }
